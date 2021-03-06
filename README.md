@@ -1,6 +1,6 @@
 ## IntPart
 
-This is a simple c++ project do calculate all partitions for a given integer N.
+This is a simple c++ project do calculate all partitions for a given integiger N.
 
 - Partition: https://en.wikipedia.org/wiki/Partition_(number_theory)
 
