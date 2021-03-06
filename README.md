@@ -2,6 +2,8 @@
 
 This is a simple c++ project do calculate all partitions for a given interger N.
 
+- Partition: https://en.wikipedia.org/wiki/Partition_(number_theory)
+
 We use memoization to reduce the time of calculation.
 
 All used methods are declare in the same haeader file.
