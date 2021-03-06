@@ -8,12 +8,9 @@ All used methods are declare in the same haeader file.
 
 To compile and run you must using some command like:
 
-- Compile:
-<you_make_path>/bin/cmake --build <your_path>/intpart/build --config Release --target all -- -j 10
+- Compile: <you_make_path>/bin/cmake --build <your_path>/intpart/build --config Release --target all -- -j 10
 
-- Run:
-
-<path_to_bin>/intpart/build/test/IntPartTests
+- Run: <path_to_bin>/intpart/build/test/IntPartTests
 
 The tests are made using googletest lib. So to try it you must install https://github.com/google/googletest.
 
