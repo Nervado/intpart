@@ -14,6 +14,6 @@ To compile and run you must using some command like:
 
 - Run: <path_to_bin>/intpart/build/test/IntPartTests
 
-The tests are made using googletest lib. So to try it you must install https://github.com/google/googletest.
+The tests are made using the googletest lib. So to try it you must install https://github.com/google/googletest.
 
 
