@@ -7,7 +7,7 @@ TEST(ExampleTests__IntPart_Part, IntPart)
   EXPECT_EQ(IntPart::part(2), "Range: 1 Average: 1.50 Median: 1.50");
   EXPECT_EQ(IntPart::part(3), "Range: 2 Average: 2.00 Median: 2.00");
   EXPECT_EQ(IntPart::part(4), "Range: 3 Average: 2.50 Median: 2.50");
-  EXPECT_EQ(IntPart::part(5), "Range: 5 Average: 3.50 Median: 3.50");
+  EXPECT_EQ(IntPart::part(8), "Range: 17 Average: 8.29 Median: 7.50");
   EXPECT_EQ(IntPart::part(50), "Range: 86093441 Average: 1552 Median: 1209");
 }
 

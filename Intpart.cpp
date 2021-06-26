@@ -28,7 +28,7 @@ string IntPart::part(long long n)
   pn[0] = 1;
   partitions p1(1, pn);
 
-  memoize.push_back(p0); // memoise enum(1) => [[1]]
+  memoize.push_back(p0); // memoise enum(0) => [[1]]
   memoize.push_back(p1); // memoise enum(1) => [[1]]
 
   long long order = 2;
@@ -58,7 +58,7 @@ string IntPart::part(long long n)
   }
 
   partition_n products = product(memoize[n]);
-  result = "Range: " + to_string(products[products.size() - 1] - products[0]) + " Average: " + to_string(IntPart::average(products)).substr(0, 4) + " Median: " + to_string(IntPart::median(products)).substr(0, 4);
+  result = "Range: " + to_string(products[products.size() - 1] - products[0]) + " Average: " + to_string(round(IntPart::average(products) * 100) / 100).substr(0, 4) + " Median: " + to_string(IntPart::median(products)).substr(0, 4);
   return result;
 }
 
@@ -169,7 +169,7 @@ partitions IntPart::enumerate(long long n)
   pn[0] = 1;
   partitions p1(1, pn);
 
-  memoize.push_back(p0); // memoise enum(1) => [[1]]
+  memoize.push_back(p0); // memoise enum(0) => [[0]]
   memoize.push_back(p1); // memoise enum(1) => [[1]]
 
   long long order = 2;
