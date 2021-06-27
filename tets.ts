@@ -24,16 +24,16 @@ export function part (n: number) {
 
     memoize.push(p1);
 
-
-
     let order = 2;
 
     while (order <= n) {
       let current_partitions: number[][] = [];
       let current = order - 1;
       current_partitions.push([order]);
+      //console.log('order: ', order);
       while (current >= 1) {
         for (let x of memoize[order - current]) {
+          //console.log('diff ', order - current)
           if (x[0] <= current && x[0] > 0) {
             let newPartition = [];
             newPartition.push(current);
@@ -45,13 +45,15 @@ export function part (n: number) {
         current--;
       }
       memoize.push(current_partitions);
+      //console.table(memoize);
       order++;
     }
+
+    //console.table(memoize[n]);
 
     let products = product(memoize[n]);
 
     result = "Range: " + (products[products.length - 1] - products[0]) + " Average: " + average(products).toFixed(2) + " Median: " + median(products).toFixed(2);
-
 
     return result;
   }
@@ -91,7 +93,6 @@ function median (p: number[]): number {
   return median;
 }
 
-
 function sortAndRemoveDuplicates (p: number[]) {
   let sorted: number[] = [];
   let sortedAndNoDuplicates: number[] = [];
@@ -106,7 +107,6 @@ function sortAndRemoveDuplicates (p: number[]) {
   }
   return sortedAndNoDuplicates;
 }
-
 
 function product (p: number[][]): number[] {
   let r: number[] = [];
@@ -123,3 +123,5 @@ function product (p: number[][]): number[] {
   result = sortAndRemoveDuplicates(r);
   return result;
 }
+
+console.log(part(45));
